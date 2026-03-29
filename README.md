@@ -7,9 +7,9 @@ This repository contains a bioinformatics pipeline for analyzing Heartland virus
 ## Background
 
 Heartland virus is a segmented negative-sense RNA virus in the family Phenuiviridae. The genome consists of three segments:
-- **L segment (NC_024495)**: 6,368 bp - encodes RNA-dependent RNA polymerase
-- **M segment (NC_024494)**: 3,427 bp - encodes glycoproteins
-- **S segment (NC_024496)**: ~1,700 bp - encodes nucleocapsid and NSs proteins
+- **L segment (NC_024495)
+- **M segment (NC_024494)
+- **S segment (NC_024496)
 
 ## Repository Structure
 
