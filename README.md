@@ -25,7 +25,10 @@ Heartland virus is a segmented negative-sense RNA virus in the family Phenuiviri
 │   │   ├── HRTV_M.reference.fasta    # Reference genome (NC_024494)
 │   │   ├── HRTV_M.reference.fasta.fai # Reference index
 │   │   └── HRTV_M.scheme.bed         # Primer coordinates
-│   └── HRTV_S/                       # S segment scheme (primer design needed)
+│   └── HRTV_S/                       # S segment scheme
+│       ├── HRTV_S.reference.fasta    # Reference genome (NC_024493)
+│       ├── HRTV_S.reference.fasta.fai # Reference index
+│       └── HRTV_S.scheme.bed         # Primer coordinates
 └── consensus_sequences/               # Example output consensus sequences
     ├── barcode03_HRTV_*_Lseg.consensus.fasta
     ├── barcode03_HRTV_*_Mseg.consensus.fasta
@@ -98,18 +101,6 @@ For each segment, the pipeline generates:
 - `*.variants.tab`: Tabular variant summary
 - `*.coverage_mask.txt`: Coverage depth information
 
-## Quality Control
-
-### Coverage Assessment
-- Minimum coverage depth: 20x recommended
-- Review coverage plots and identify low-coverage regions
-- Check for primer dropout or amplification failure
-
-### Consensus Quality
-- Review N content in consensus sequences
-- Validate against reference sequences (NC_024495, NC_024494, NC_024496)
-- Check for expected ORF structure
-
 ## Troubleshooting
 
 ### Common Issues
@@ -141,30 +132,3 @@ samtools depth *.primertrimmed.rg.sorted.bam | awk '{print $3}' | sort -n
 # Validate primer binding
 samtools view *.sorted.bam | head -20
 ```
-
-## Development Notes
-
-### Current Status
-- L and M segment schemes validated
-- S segment scheme under development
-- Pipeline tested with R10.4.1 flowcells
-
-### Future Improvements
-- Complete S segment primer design
-- Add automated QC reporting
-- Implement phylogenetic analysis module
-- Add support for R9.4.1 flowcells
-
-## References
-
-1. McMullan, L.K., et al. (2012). "A new phlebovirus associated with severe febrile illness in Missouri." New England Journal of Medicine, 367(9), 834-841.
-2. ARTIC Network. "Real-time molecular epidemiology for outbreak response." https://artic.network/
-3. Oxford Nanopore Technologies. "Medaka: Sequence correction provided by ONT Research." https://github.com/nanoporetech/medaka
-
-## Contact
-
-For questions or issues regarding this pipeline, please contact the Fauver Lab.
-
-## License
-
-This pipeline is provided for research use. Please cite appropriate references when using this workflow in publications.
