@@ -26,7 +26,7 @@ Heartland virus is a segmented negative-sense RNA virus in the family Phenuiviri
 │   │   ├── HRTV_M.reference.fasta.fai # Reference index
 │   │   └── HRTV_M.scheme.bed         # Primer coordinates
 │   └── HRTV_S/                       # S segment scheme
-│       ├── HRTV_S.reference.fasta    # Reference genome (NC_024493)
+│       ├── HRTV_S.reference.fasta    # Reference genome (NC_024496)
 │       ├── HRTV_S.reference.fasta.fai # Reference index
 │       └── HRTV_S.scheme.bed         # Primer coordinates
 └── consensus_sequences/               # Example output consensus sequences
